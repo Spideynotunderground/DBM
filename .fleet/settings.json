@@ -1,0 +1,28 @@
+{
+    "plugins": [
+        {
+            "type": "add",
+            "pluginName": "fleet.ai"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.aiCompletion"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.python.ai"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.emmet"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.docker"
+        },
+        {
+            "type": "add",
+            "pluginName": "fleet.tailwindcss"
+        }
+    ]
+}

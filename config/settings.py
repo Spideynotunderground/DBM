@@ -10,7 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
-
 import os.path
 from pathlib import Path
 
@@ -140,6 +139,10 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'locale'),
+]
+
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
@@ -147,6 +150,13 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
+
+gettext = lambda s: s
+
+LANGUAGES = (
+    ('en', gettext('English')),
+    ('ru', gettext('Russian')),
+)
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
@@ -209,7 +219,6 @@ EMAIL_HOST_PASSWORD = 'bndtuepagzrqncnn'
 RECAPTCHA_PUBLIC_KEY = '6LfPdggqAAAAAD0gSRhzV2nE0eRd-P95Ew5kBWv8'
 RECAPTCHA_PRIVATE_KEY = '6LfPdggqAAAAAAqnN9iV17p3G9Kg8cauuQTSVMJi'
 
-
 RECAPTCHA_ERROR_MSG = {
-    'required' : 'Please complete reCAPTCHA',
+    'required': 'Please complete reCAPTCHA',
 }
